@@ -7,7 +7,7 @@ typedef struct LinuxOS {
     int installed_version;
 } LinuxOS;
 
-OperationSystem + <linux: LinuxOS;>;
+OperationSystem + <linuxOS: LinuxOS;>;
 
 OperationSystem* linux_create(int installed_apps, int installed_version);
 

@@ -7,7 +7,7 @@ typedef struct WindowsOS {
     int release_year;
 } WindowsOS;
 
-OperationSystem + <windows: WindowsOS;>;
+OperationSystem + <windowsOS: WindowsOS;>;
 
 OperationSystem* windows_create(int installed_apps, int release_year);
 
