@@ -3,6 +3,7 @@
 # =========================
 
 USE_DOCKER ?= yes
+ARGS ?=
 
 ROOT := .
 SRC_DIR := $(ROOT)/src
@@ -56,9 +57,9 @@ endif
 # =========================
 run:
 ifeq ($(USE_DOCKER),yes)
-	$(DOCKER) bash -i -c "./$(BIN)"
+	$(DOCKER) bash -i -c "./$(BIN) $(ARGS)"
 else
-	./$(BIN)
+	./$(BIN) $(ARGS)
 endif
 
 # =========================
