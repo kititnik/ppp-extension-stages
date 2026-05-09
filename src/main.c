@@ -2,9 +2,11 @@
 #include "linux_in_out.h"
 #include "windows_in_out.h"
 #include "container.h"
+#include "os_inv_apps.h"
 
 void read_from_file(FILE* file, struct ppVector.os* operation_systems);
 void write_to_file(FILE* file, struct ppVector.os* operation_systems);
+void write_inv_apps_to_file(FILE* file, struct ppVector.os* operation_systems);
 
 int main(int argc, char* argv[]) {
     if(argc != 3) {
@@ -21,7 +23,7 @@ int main(int argc, char* argv[]) {
     read_from_file(input_file, &operation_systems);
     fclose(input_file);
 
-    write_to_file(output_file, &operation_systems);
+    write_inv_apps_to_file(output_file, &operation_systems);
     fclose(output_file);
 }
 
@@ -40,5 +42,16 @@ void write_to_file(FILE* file, struct ppVector.os* operation_systems) {
         OperationSystem* os;
         ppVector_GET_VAL_INDEX(os, (*operation_systems), i);
         OSOut<os>(file);
+    }
+}
+
+void write_inv_apps_to_file(FILE* file, struct ppVector.os* operation_systems) {
+    int size = ppVector_size((ppVector*)operation_systems);
+    for (int i = 0; i < size; i++) {
+        fprintf(file, "%d: ", i);
+        OperationSystem* os;
+        ppVector_GET_VAL_INDEX(os, (*operation_systems), i);
+        double res = calculate_inv_apps(os);
+        fprintf(file, "%f\n", res);
     }
 }
