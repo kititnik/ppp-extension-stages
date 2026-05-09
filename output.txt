@@ -1,3 +1,4 @@
-Container contains 2 elements.
+Container contains 3 elements.
 0: Linux OS: installed apps=5, version=10
 1: Windows OS: installed apps=2, release year=4
+2: MacOS: installed apps=4, processor type=ERROR
