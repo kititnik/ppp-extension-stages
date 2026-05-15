@@ -1,6 +1,4 @@
-#include "os_in_out.h"
-#include "linux_in_out.h"
-#include "windows_in_out.h"
+#include "os_ram.h"
 #include "container.h"
 
 void read_from_file(FILE* file, struct ppVector.os* operation_systems);

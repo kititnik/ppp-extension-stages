@@ -1,3 +1,3 @@
 Container contains 2 elements.
-0: Linux OS: installed apps=5, version=10
-1: Windows OS: installed apps=2, release year=4
+0: Linux OS: installed apps=5, version=10, RAM amount=5
+1: Windows OS: installed apps=2, release year=4, RAM amount=10
