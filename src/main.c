@@ -3,6 +3,8 @@
 #include "windows_in_out.h"
 #include "container.h"
 
+void container_linux_only_out(FILE* file, struct ppVector.os* operation_systems);
+
 void read_from_file(FILE* file, struct ppVector.os* operation_systems);
 void write_to_file(FILE* file, struct ppVector.os* operation_systems);
 
@@ -21,7 +23,8 @@ int main(int argc, char* argv[]) {
     read_from_file(input_file, &operation_systems);
     fclose(input_file);
 
-    write_to_file(output_file, &operation_systems);
+    container_linux_only_out(output_file, &operation_systems);
+    //write_to_file(output_file, &operation_systems);
     fclose(output_file);
 }
 
