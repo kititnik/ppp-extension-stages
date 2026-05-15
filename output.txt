@@ -1,3 +1,4 @@
-Container contains 2 elements.
-0: Linux OS: installed apps=5, version=10
-1: Windows OS: installed apps=2, release year=4
+First and second OSes are Linux
+Linux - Windows Combination
+Windows - Linux Combination
+First and second OSes are Windows
